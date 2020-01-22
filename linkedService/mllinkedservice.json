@@ -1,0 +1,15 @@
+{
+	"name": "mllinkedservice",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"type": "AzureML",
+		"typeProperties": {
+			"mlEndpoint": "https://ussouthcentral.services.azureml.net/subscriptions/0e9bace87a81492283b5d995ff706507/services/75cb086ebe074d29bae5f1ce8311174d/jobs",
+			"apiKey": {
+				"type": "SecureString",
+				"value": "**********"
+			}
+		},
+		"annotations": []
+	}
+}

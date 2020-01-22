@@ -1,0 +1,40 @@
+{
+	"name": "csvfile",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Blobgen2",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"sourceFile": {
+				"type": "string",
+				"defaultValue": " @pipeline().parameters.sourceFile"
+			},
+			"sourceFolder": {
+				"type": "string",
+				"defaultValue": " @pipeline().parameters.sourceFolder"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": {
+					"value": "@dataset().sourceFile",
+					"type": "Expression"
+				},
+				"folderPath": {
+					"value": "@dataset().sourceFolder",
+					"type": "Expression"
+				}
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

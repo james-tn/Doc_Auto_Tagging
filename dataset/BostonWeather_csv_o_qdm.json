@@ -1,0 +1,43 @@
+{
+	"name": "BostonWeather_csv_o_qdm",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Destination_DataLakeStore_qdm",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureDataLakeStoreFile",
+		"structure": [
+			{
+				"name": "Prop_0",
+				"type": "DateTime"
+			},
+			{
+				"name": "Prop_1",
+				"type": "String"
+			},
+			{
+				"name": "Prop_2",
+				"type": "Int64"
+			},
+			{
+				"name": "Prop_3",
+				"type": "Int64"
+			},
+			{
+				"name": "Prop_4",
+				"type": "Int64"
+			}
+		],
+		"typeProperties": {
+			"format": {
+				"type": "TextFormat",
+				"columnDelimiter": ",",
+				"treatEmptyAsNull": true
+			},
+			"fileName": "BostonWeather.csv",
+			"folderPath": "demo_data"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,28 @@
+{
+	"name": "eventbase",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "copy data from blob to blob",
+					"type": "PipelineReference"
+				},
+				"parameters": {
+					"sourceFolder": "@triggerBody().folderPath",
+					"sourceFile": "@triggerBody().fileName"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/general/blobs/csv/",
+			"blobPathEndsWith": ".csv",
+			"scope": "/subscriptions/0e9bace8-7a81-4922-83b5-d995ff706507/resourceGroups/databackend/providers/Microsoft.Storage/storageAccounts/storagemsv2",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}

@@ -1,0 +1,16 @@
+{
+	"name": "201501_hubway_tripdata_csv_i_8jf",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Source_File_osx",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "FileShare",
+		"typeProperties": {
+			"fileName": "201501-hubway-tripdata.csv",
+			"folderPath": ""
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

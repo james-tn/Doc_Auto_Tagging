@@ -1,0 +1,27 @@
+{
+	"name": "trigger1",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "copy_data",
+					"type": "PipelineReference"
+				},
+				"parameters": {
+					"sourceFolder": "dfdf",
+					"sourceFile": "dfdfd"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathEndsWith": ".html",
+			"scope": "/subscriptions/0e9bace8-7a81-4922-83b5-d995ff706507/resourceGroups/databackend/providers/Microsoft.Storage/storageAccounts/storagemsv2",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}

@@ -1,0 +1,74 @@
+{
+	"name": "1011aiv",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "CTL_ftp",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "FileShare",
+		"structure": [
+			{
+				"name": "country",
+				"type": "String"
+			},
+			{
+				"name": "state",
+				"type": "String"
+			},
+			{
+				"name": "asn",
+				"type": "Int64"
+			},
+			{
+				"name": "streaming_technology",
+				"type": "String"
+			},
+			{
+				"name": "device",
+				"type": "String"
+			},
+			{
+				"name": "customer_ip",
+				"type": "String"
+			},
+			{
+				"name": "server_ip_list",
+				"type": "String"
+			},
+			{
+				"name": "start_time",
+				"type": "DateTime"
+			},
+			{
+				"name": "end_time",
+				"type": "DateTime"
+			},
+			{
+				"name": "url",
+				"type": "String"
+			},
+			{
+				"name": "num_rebuffers",
+				"type": "Int64"
+			},
+			{
+				"name": "num_fatal_errors",
+				"type": "Int64"
+			},
+			{
+				"name": "first_rebuffer_timestamp",
+				"type": "String"
+			}
+		],
+		"typeProperties": {
+			"compression": {
+				"type": "GZip",
+				"level": "Fastest"
+			},
+			"fileName": "2018-10-11-live-aiv.csv.gz",
+			"folderPath": ""
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

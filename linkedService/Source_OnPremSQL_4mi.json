@@ -1,0 +1,20 @@
+{
+	"name": "Source_OnPremSQL_4mi",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"type": "SqlServer",
+		"typeProperties": {
+			"connectionString": {
+				"type": "SecureString",
+				"value": "**********"
+			},
+			"username": "REDMOND\\janguy",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJkNzY4MWIxZi1kMzI4LTQzNTItOWFmOS1lMWQ5NjBlNTg4ZjMiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "IntegrationRuntime-SelfHosted-8jf",
+			"type": "IntegrationRuntimeReference"
+		},
+		"annotations": []
+	}
+}

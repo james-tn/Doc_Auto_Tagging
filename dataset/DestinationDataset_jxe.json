@@ -1,0 +1,19 @@
+{
+	"name": "DestinationDataset_jxe",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStore1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureDataLakeStoreFile",
+		"typeProperties": {
+			"format": {
+				"type": "ParquetFormat"
+			},
+			"fileName": "crime_detail",
+			"folderPath": "demo_data"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

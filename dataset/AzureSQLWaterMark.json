@@ -1,0 +1,15 @@
+{
+	"name": "AzureSQLWaterMark",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"typeProperties": {
+			"tableName": "[dbo].[watermarktable]"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

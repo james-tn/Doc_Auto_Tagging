@@ -1,0 +1,12 @@
+{
+	"name": "Hdfs1",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "Hdfs",
+		"typeProperties": {
+			"url": "hdfs://locahost",
+			"authenticationType": "Anonymous"
+		}
+	}
+}

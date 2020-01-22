@@ -1,0 +1,6 @@
+{
+	"name": "integrationRuntime4",
+	"properties": {
+		"type": "SelfHosted"
+	}
+}

@@ -1,0 +1,19 @@
+{
+	"name": "DestinationDataset_9e9",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Blobgen2",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureBlob",
+		"typeProperties": {
+			"format": {
+				"type": "ParquetFormat"
+			},
+			"fileName": "",
+			"folderPath": "ctl"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

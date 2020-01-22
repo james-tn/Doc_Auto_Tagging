@@ -1,0 +1,20 @@
+{
+	"name": "Run_table_datalake",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Destination_DataLakeStore_8jf",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureDataLakeStoreFile",
+		"typeProperties": {
+			"format": {
+				"type": "JsonFormat",
+				"filePattern": "arrayOfObjects"
+			},
+			"fileName": "table.json",
+			"folderPath": "run_data"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

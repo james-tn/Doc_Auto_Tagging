@@ -1,0 +1,81 @@
+{
+	"name": "1011aiv",
+	"properties": {
+		"activities": [
+			{
+				"name": "1011aiv",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 50,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "ParquetSource",
+						"storeSettings": {
+							"type": "AzureBlobFSReadSettings",
+							"recursive": true,
+							"wildcardFileName": "*.parquet"
+						}
+					},
+					"sink": {
+						"type": "AzureBlobFSSink"
+					},
+					"enableStaging": false,
+					"dataIntegrationUnits": 0,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "Feb",
+									"type": "Int64"
+								},
+								"sink": {
+									"name": "Feb"
+								}
+							},
+							{
+								"source": {
+									"name": "Jan",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Jan"
+								}
+							},
+							{
+								"source": {
+									"name": "Mar",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "Mar"
+								}
+							}
+						]
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "Parquet1",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "AzureDataLakeStorageFilegen2",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": []
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

@@ -1,0 +1,17 @@
+{
+	"name": "localfilesystem",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "FileServer",
+		"typeProperties": {
+			"host": "C:\\Users\\janguy\\Downloads\\data",
+			"userId": "REDMOND\\janguy",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI4ODc4OGYwZi05YjdlLTQwYzMtYWU4Ni1kYzk4Y2U2YzdlMjUiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "IntegrationRuntime-SelfHosted-8jf",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

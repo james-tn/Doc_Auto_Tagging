@@ -1,0 +1,33 @@
+{
+	"name": "AzureDataLakeStorageFilegen2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage2",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureBlobFSFile",
+		"structure": [
+			{
+				"name": "Feb",
+				"type": "Int64"
+			},
+			{
+				"name": "Jan",
+				"type": "String"
+			},
+			{
+				"name": "Mar",
+				"type": "Decimal"
+			}
+		],
+		"typeProperties": {
+			"format": {
+				"type": "ParquetFormat"
+			},
+			"fileName": "",
+			"folderPath": "tbl/destparquet5"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

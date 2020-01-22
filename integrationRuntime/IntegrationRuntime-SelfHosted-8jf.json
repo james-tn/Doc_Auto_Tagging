@@ -1,0 +1,6 @@
+{
+	"name": "IntegrationRuntime-SelfHosted-8jf",
+	"properties": {
+		"type": "SelfHosted"
+	}
+}

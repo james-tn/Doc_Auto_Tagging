@@ -1,0 +1,66 @@
+{
+	"name": "2017__i_zq6",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Source_File_zq6",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "FileShare",
+		"structure": [
+			{
+				"name": "Prop_0",
+				"type": "String"
+			},
+			{
+				"name": "Prop_1",
+				"type": "Int64"
+			},
+			{
+				"name": "Prop_2",
+				"type": "Int64"
+			},
+			{
+				"name": "Prop_3",
+				"type": "Int64"
+			},
+			{
+				"name": "Prop_4",
+				"type": "Int64"
+			},
+			{
+				"name": "Prop_5",
+				"type": "String"
+			},
+			{
+				"name": "Prop_6",
+				"type": "String"
+			},
+			{
+				"name": "Prop_7",
+				"type": "Int64"
+			},
+			{
+				"name": "Prop_8",
+				"type": "Int64"
+			},
+			{
+				"name": "Prop_9",
+				"type": "Int64"
+			},
+			{
+				"name": "Prop_10",
+				"type": "Int64"
+			}
+		],
+		"typeProperties": {
+			"format": {
+				"type": "TextFormat",
+				"columnDelimiter": ",",
+				"treatEmptyAsNull": true
+			},
+			"folderPath": "2017/"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

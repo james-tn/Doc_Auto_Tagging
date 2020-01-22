@@ -1,0 +1,71 @@
+{
+	"name": "partition_copy",
+	"properties": {
+		"activities": [
+			{
+				"name": "iterate_partition",
+				"type": "ForEach",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@pipeline().parameters.partitions",
+						"type": "Expression"
+					},
+					"activities": [
+						{
+							"name": "copy_sql",
+							"description": "",
+							"type": "Copy",
+							"dependsOn": [],
+							"policy": {
+								"timeout": "7.00:00:00",
+								"retry": 0,
+								"retryIntervalInSeconds": 30,
+								"secureOutput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"source": {
+									"type": "SqlSource",
+									"sqlReaderQuery": {
+										"value": " select * from [AdventureWorks2017].[Purchasing].[PurchaseOrderHeader] where OrderDate >= '@{item().start_date}'  and OrderDate < '@{item().end_date}'  ",
+										"type": "Expression"
+									}
+								},
+								"sink": {
+									"type": "AzureDataLakeStoreSink"
+								},
+								"enableStaging": false,
+								"enableSkipIncompatibleRow": true,
+								"dataIntegrationUnits": 0
+							},
+							"inputs": [
+								{
+									"referenceName": "JamespcSQLDemo",
+									"type": "DatasetReference"
+								}
+							],
+							"outputs": [
+								{
+									"referenceName": "AzureDataLakeStoreSQLCopied",
+									"type": "DatasetReference",
+									"parameters": {
+										"SinkFileName": "\"@{concat(item().TABLE_NAME,'/', formatDateTime(pipeline().TriggerTime, 'yyyy'), '/', formatDateTime(pipeline().TriggerTime, 'MM'), '/', formatDateTime(pipeline(). TriggerTime, 'dd'), '/', item().partition)}.csv\""
+									}
+								}
+							]
+						}
+					]
+				}
+			}
+		],
+		"parameters": {
+			"partitions": {
+				"type": "Object"
+			}
+		},
+		"annotations": []
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

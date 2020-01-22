@@ -1,0 +1,36 @@
+{
+	"name": "Parquet1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage2",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "testparquet",
+				"fileSystem": "tbl"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": [
+			{
+				"name": "Feb",
+				"type": "INT64"
+			},
+			{
+				"name": "Jan",
+				"type": "UTF8"
+			},
+			{
+				"name": "Mar",
+				"type": "DECIMAL",
+				"precision": 9,
+				"scale": 6
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

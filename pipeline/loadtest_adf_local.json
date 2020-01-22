@@ -1,0 +1,47 @@
+{
+	"name": "loadtest_adf_local",
+	"properties": {
+		"activities": [
+			{
+				"name": "CopyfromAzureSQL",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "SqlSource",
+						"sqlReaderQuery": "select [SalesOrderID]\n    \n      ,[OrderQty]\n      ,[ProductID]\n      ,[UnitPrice]\n      ,[UnitPriceDiscount]\n      ,[LineTotal]\n      ,[ModifiedDate],[SalesOrderID]\n    \n      ,[OrderQty]\n      ,[ProductID]\n      ,[UnitPrice]\n      ,[UnitPriceDiscount]\n      ,[LineTotal]\n      ,[ModifiedDate],[SalesOrderID]\n    \n      ,[OrderQty]\n      ,[ProductID]\n      ,[UnitPrice]\n      ,[UnitPriceDiscount]\n      ,[LineTotal]\n      ,[ModifiedDate],[SalesOrderID]\n    \n      ,[OrderQty]\n      ,[ProductID]\n      ,[UnitPrice]\n      ,[UnitPriceDiscount]\n      ,[LineTotal]\n      ,[ModifiedDate],[SalesOrderID]\n    \n      ,[OrderQty]\n      ,[ProductID]\n      ,[UnitPrice]\n      ,[UnitPriceDiscount]\n      ,[LineTotal]\n      ,[ModifiedDate],[SalesOrderID]\n    \n      ,[OrderQty]\n      ,[ProductID]\n      ,[UnitPrice]\n      ,[UnitPriceDiscount]\n      ,[LineTotal]\n      ,[ModifiedDate],\n\t  [SalesOrderID]\n    \n      ,[OrderQty]\n      ,[ProductID]\n      ,[UnitPrice]\n      ,[UnitPriceDiscount]\n      ,[LineTotal]\n      ,[ModifiedDate],[SalesOrderID]\n    \n      ,[OrderQty]\n      ,[ProductID]\n      ,[UnitPrice]\n      ,[UnitPriceDiscount]\n      ,[LineTotal]\n      ,[ModifiedDate],[SalesOrderID]\n    \n      ,[OrderQty]\n      ,[ProductID]\n      ,[UnitPrice]\n      ,[UnitPriceDiscount]\n      ,[LineTotal]\n      ,[ModifiedDate],[SalesOrderID]\n    \n      ,[OrderQty]\n      ,[ProductID]\n      ,[UnitPrice]\n      ,[UnitPriceDiscount]\n      ,[LineTotal]\n      ,[ModifiedDate],[SalesOrderID]\n    \n      ,[OrderQty]\n      ,[ProductID]\n      ,[UnitPrice]\n      ,[UnitPriceDiscount]\n      ,[LineTotal]\n      ,[ModifiedDate],[SalesOrderID]\n    \n      ,[OrderQty]\n      ,[ProductID]\n      ,[UnitPrice]\n      ,[UnitPriceDiscount]\n      ,[LineTotal]\n      ,[ModifiedDate]\n  FROM [adl_test] \n  union all\n\n  select [SalesOrderID]\n    \n      ,[OrderQty]\n      ,[ProductID]\n      ,[UnitPrice]\n      ,[UnitPriceDiscount]\n      ,[LineTotal]\n      ,[ModifiedDate],[SalesOrderID]\n    \n      ,[OrderQty]\n      ,[ProductID]\n      ,[UnitPrice]\n      ,[UnitPriceDiscount]\n      ,[LineTotal]\n      ,[ModifiedDate],[SalesOrderID]\n    \n      ,[OrderQty]\n      ,[ProductID]\n      ,[UnitPrice]\n      ,[UnitPriceDiscount]\n      ,[LineTotal]\n      ,[ModifiedDate],[SalesOrderID]\n    \n      ,[OrderQty]\n      ,[ProductID]\n      ,[UnitPrice]\n      ,[UnitPriceDiscount]\n      ,[LineTotal]\n      ,[ModifiedDate],[SalesOrderID]\n    \n      ,[OrderQty]\n      ,[ProductID]\n      ,[UnitPrice]\n      ,[UnitPriceDiscount]\n      ,[LineTotal]\n      ,[ModifiedDate],[SalesOrderID]\n    \n      ,[OrderQty]\n      ,[ProductID]\n      ,[UnitPrice]\n      ,[UnitPriceDiscount]\n      ,[LineTotal]\n      ,[ModifiedDate],\n\t  [SalesOrderID]\n    \n      ,[OrderQty]\n      ,[ProductID]\n      ,[UnitPrice]\n      ,[UnitPriceDiscount]\n      ,[LineTotal]\n      ,[ModifiedDate],[SalesOrderID]\n    \n      ,[OrderQty]\n      ,[ProductID]\n      ,[UnitPrice]\n      ,[UnitPriceDiscount]\n      ,[LineTotal]\n      ,[ModifiedDate],[SalesOrderID]\n    \n      ,[OrderQty]\n      ,[ProductID]\n      ,[UnitPrice]\n      ,[UnitPriceDiscount]\n      ,[LineTotal]\n      ,[ModifiedDate],[SalesOrderID]\n    \n      ,[OrderQty]\n      ,[ProductID]\n      ,[UnitPrice]\n      ,[UnitPriceDiscount]\n      ,[LineTotal]\n      ,[ModifiedDate],[SalesOrderID]\n    \n      ,[OrderQty]\n      ,[ProductID]\n      ,[UnitPrice]\n      ,[UnitPriceDiscount]\n      ,[LineTotal]\n      ,[ModifiedDate],[SalesOrderID]\n    \n      ,[OrderQty]\n      ,[ProductID]\n      ,[UnitPrice]\n      ,[UnitPriceDiscount]\n      ,[LineTotal]\n      ,[ModifiedDate]\n  FROM [adl_test]"
+					},
+					"sink": {
+						"type": "AzureDataLakeStoreSink"
+					},
+					"enableStaging": false,
+					"dataIntegrationUnits": 0
+				},
+				"inputs": [
+					{
+						"referenceName": "AzureSQLWaterMark",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "AzureDataLakeStoreSQLCopied",
+						"type": "DatasetReference",
+						"parameters": {
+							"SinkFileName": "load_test.csv"
+						}
+					}
+				]
+			}
+		],
+		"annotations": []
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

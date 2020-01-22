@@ -1,0 +1,19 @@
+{
+	"name": "AzureDataLakeStore1",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"type": "AzureDataLakeStore",
+		"typeProperties": {
+			"dataLakeStoreUri": "https://adlstore01.azuredatalakestore.net/webhdfs/v1",
+			"servicePrincipalId": "af883abf-89dd-4889-bdb3-1ee84f68465e",
+			"servicePrincipalKey": {
+				"type": "SecureString",
+				"value": "**********"
+			},
+			"tenant": "72f988bf-86f1-41af-91ab-2d7cd011db47",
+			"subscriptionId": "0e9bace8-7a81-4922-83b5-d995ff706507",
+			"resourceGroupName": "databackend"
+		},
+		"annotations": []
+	}
+}

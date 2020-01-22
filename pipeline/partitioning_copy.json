@@ -1,0 +1,57 @@
+{
+	"name": "partitioning_copy",
+	"properties": {
+		"activities": [
+			{
+				"name": "Lookup_partition",
+				"type": "Lookup",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "AzureDataLakeStoreSource",
+						"recursive": true
+					},
+					"dataset": {
+						"referenceName": "partition_table_data_lake",
+						"type": "DatasetReference"
+					},
+					"firstRowOnly": false
+				}
+			},
+			{
+				"name": "execuate_each_partion_copy",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "Lookup_partition",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "partition_copy",
+						"type": "PipelineReference"
+					},
+					"parameters": {
+						"partitions": {
+							"value": "@activity('Lookup_partition').output.value",
+							"type": "Expression"
+						}
+					}
+				}
+			}
+		],
+		"annotations": []
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

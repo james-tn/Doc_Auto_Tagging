@@ -1,0 +1,17 @@
+{
+	"name": "Source_File_zq6",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"type": "FileServer",
+		"typeProperties": {
+			"host": "C:\\Users\\janguy\\Documents\\bootcamp\\data\\FlightsAndWeather\\FlightsAndWeather",
+			"userId": "REDMOND\\janguy",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJmYmNlYjE5ZS1jZGFhLTRjY2MtYjQzNS1lOGZhZjAwMDZjZmMiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "IntegrationRuntime-SelfHosted-8jf",
+			"type": "IntegrationRuntimeReference"
+		},
+		"annotations": []
+	}
+}

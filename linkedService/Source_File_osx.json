@@ -1,0 +1,17 @@
+{
+	"name": "Source_File_osx",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"type": "FileServer",
+		"typeProperties": {
+			"host": "C:\\Users\\janguy\\Downloads\\data download for training\\hubway_tripdata",
+			"userId": "REDMOND\\janguy",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI5ZjUwNTVkYS0zOTFhLTQ4MzktOTkzMC01OWVkNjQ0NjFhM2EiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "IntegrationRuntime-SelfHosted-8jf",
+			"type": "IntegrationRuntimeReference"
+		},
+		"annotations": []
+	}
+}

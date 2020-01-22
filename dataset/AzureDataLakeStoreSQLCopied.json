@@ -1,0 +1,41 @@
+{
+	"name": "AzureDataLakeStoreSQLCopied",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Destination_DataLakeStore_8jf",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"SinkFileName": {
+				"type": "String"
+			}
+		},
+		"annotations": [],
+		"type": "AzureDataLakeStoreFile",
+		"structure": [
+			{
+				"name": "project_id",
+				"type": "String"
+			},
+			{
+				"name": "Date",
+				"type": "DateTime"
+			}
+		],
+		"typeProperties": {
+			"format": {
+				"type": "TextFormat",
+				"columnDelimiter": ",",
+				"nullValue": "\\N",
+				"treatEmptyAsNull": true,
+				"firstRowAsHeader": false
+			},
+			"fileName": {
+				"value": "@{dataset().SinkFileName}",
+				"type": "Expression"
+			},
+			"folderPath": "tables"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

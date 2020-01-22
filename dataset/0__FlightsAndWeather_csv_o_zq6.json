@@ -1,0 +1,74 @@
+{
+	"name": "0__FlightsAndWeather_csv_o_zq6",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Destination_BlobStorage_zq6",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureBlob",
+		"structure": [
+			{
+				"name": "Prop_0",
+				"type": "String"
+			},
+			{
+				"name": "Prop_1",
+				"type": "Int64"
+			},
+			{
+				"name": "Prop_2",
+				"type": "Int64"
+			},
+			{
+				"name": "Prop_3",
+				"type": "Int64"
+			},
+			{
+				"name": "Prop_4",
+				"type": "Int64"
+			},
+			{
+				"name": "Prop_5",
+				"type": "String"
+			},
+			{
+				"name": "Prop_6",
+				"type": "String"
+			},
+			{
+				"name": "Prop_7",
+				"type": "Int64"
+			},
+			{
+				"name": "Prop_8",
+				"type": "Int64"
+			},
+			{
+				"name": "Prop_9",
+				"type": "Int64"
+			},
+			{
+				"name": "Prop_10",
+				"type": "Int64"
+			}
+		],
+		"typeProperties": {
+			"format": {
+				"type": "TextFormat",
+				"columnDelimiter": ",",
+				"treatEmptyAsNull": true,
+				"firstRowAsHeader": true
+			},
+			"fileName": {
+				"value": " FlightsAndWeather.csv",
+				"type": "Expression"
+			},
+			"folderPath": {
+				"value": "sparkcontainer/FlightsAndWeather/@{formatDateTime(pipeline().parameters.windowStart,'yy')}/@{formatDateTime(pipeline().parameters.windowStart,'MM')}/ ",
+				"type": "Expression"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,15 @@
+{
+	"name": "SourceDataset_jxe",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"typeProperties": {
+			"tableName": "dbo.Chicago_Crimes"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

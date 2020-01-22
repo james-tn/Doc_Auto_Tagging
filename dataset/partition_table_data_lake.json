@@ -1,0 +1,42 @@
+{
+	"name": "partition_table_data_lake",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Destination_DataLakeStore_8jf",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureDataLakeStoreFile",
+		"structure": [
+			{
+				"name": "TABLE_NAME",
+				"type": "String"
+			},
+			{
+				"name": "partition",
+				"type": "String"
+			},
+			{
+				"name": "start_date",
+				"type": "String"
+			},
+			{
+				"name": "end_date",
+				"type": "String"
+			}
+		],
+		"typeProperties": {
+			"format": {
+				"type": "TextFormat",
+				"columnDelimiter": ",",
+				"rowDelimiter": "",
+				"nullValue": "\\N",
+				"treatEmptyAsNull": true,
+				"firstRowAsHeader": true
+			},
+			"fileName": "table_partition.csv",
+			"folderPath": "run_data"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

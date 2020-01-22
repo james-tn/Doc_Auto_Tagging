@@ -1,0 +1,51 @@
+{
+	"name": "dbo_adl_test_o_4mi",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Destination_DataLakeStore_4mi",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureDataLakeStoreFile",
+		"structure": [
+			{
+				"name": "SalesOrderID",
+				"type": "Int32"
+			},
+			{
+				"name": "OrderQty",
+				"type": "Int16"
+			},
+			{
+				"name": "ProductID",
+				"type": "Int32"
+			},
+			{
+				"name": "UnitPrice",
+				"type": "Decimal"
+			},
+			{
+				"name": "UnitPriceDiscount",
+				"type": "Decimal"
+			},
+			{
+				"name": "LineTotal",
+				"type": "Decimal"
+			},
+			{
+				"name": "ModifiedDate",
+				"type": "DateTime"
+			}
+		],
+		"typeProperties": {
+			"format": {
+				"type": "TextFormat",
+				"columnDelimiter": ",",
+				"treatEmptyAsNull": true
+			},
+			"fileName": "dbo.adl_test",
+			"folderPath": "demo_data"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

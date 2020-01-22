@@ -1,0 +1,12 @@
+{
+	"name": "JamespcSQLDemo",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SQLjamespc",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable"
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

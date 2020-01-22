@@ -1,0 +1,23 @@
+{
+	"name": "demo_data_duration_parquet_o_8jf",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Destination_DataLakeStore_8jf",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureDataLakeStoreFile",
+		"typeProperties": {
+			"format": {
+				"type": "TextFormat",
+				"columnDelimiter": ",",
+				"rowDelimiter": "",
+				"nullValue": "\\N",
+				"treatEmptyAsNull": true,
+				"firstRowAsHeader": false
+			},
+			"folderPath": "demo_data/duration.parquet"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
